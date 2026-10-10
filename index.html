@@ -5,18 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Yoonji Nam is a multimodal AI researcher and engineer working on multimodal language models, knowledge editing, and applied machine learning.">
-  <meta name="theme-color" content="#0b0d12">
+  <meta name="theme-color" content="#f5f6f8">
   <meta property="og:title" content="Yoonji Nam — Multimodal AI Research & Engineering">
   <meta property="og:description" content="Research and engineering across multimodal models, evaluation, knowledge editing, and applied AI systems.">
   <meta property="og:image" content="profile_2026.jpg">
   <title>Yoonji Nam</title>
-  <link rel="stylesheet" href="style.css?v=bg-12161d">
+  <link rel="alternate" hreflang="en" href="https://namyoonji.github.io/">
+  <link rel="alternate" hreflang="ko" href="https://namyoonji.github.io/ko/">
+  <link rel="stylesheet" href="style.css?v=light-20261005">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <nav class="toc" aria-label="Sections">
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#education">Education</a>
+    <a href="ko/" hreflang="ko" lang="ko">한국어</a>
+  </nav>
   <main class="container">
     <header class="header">
       <div class="profile-photo">
@@ -56,6 +66,15 @@
       <h2 class="section-title">Publications.</h2>
       <div class="section-content">
         <article class="publication">
+          <p class="pub-title">SitCom: Scaling Egocentric Multi-Party Spoken Dialogue for Situated Communication Assistance</p>
+          <p class="pub-authors">Heeseung Yun*, Sehun Lee*, Tony Woo†, <span class="author-me">Yoonji Nam</span>†, Sung-Feng Huang, Chao-Han Huck Yang, Gunhee Kim</p>
+          <p class="pub-venue">NeurIPS 2026</p>
+          <p class="pub-description">Designed the QA construction and evaluation protocol for SitCom-Bench, splitting it into dialogue-understanding and in-the-moment response questions, and built the generation pipeline behind its 4.3k human-verified questions.</p>
+          <p class="equal-note">*, † Equal contribution.</p>
+        </article>
+
+
+        <article class="publication">
           <p class="pub-title">MemEIC: A Step Toward Continual and Compositional Knowledge Editing</p>
           <p class="pub-authors">Jin Seong*, Jiyun Park*, Wencke Liermann, Hongseok Choi, <span class="author-me">Yoonji Nam</span>, Hyun Kim, Soojong Lim, Namhoon Lee</p>
           <p class="pub-venue">
@@ -74,24 +93,82 @@
       <div class="section-content">
         <article class="experience">
           <p class="exp-title">Vision and Learning Lab, Seoul National University</p>
-          <p class="exp-role">Research Intern</p>
           <p class="exp-date">Apr 2025 – Jun 2026</p>
-          <p class="item-description">Built scalable data-generation, annotation, and evaluation pipelines for two multimodal benchmarks, and conducted model failure analysis to refine task and dataset design.</p>
+          <p class="item-description">Researched omnimodal language models across vision, speech, and language, targeting audio-visual deixis and assistance in multi-party spoken dialogue. Built data-generation, annotation, and evaluation pipelines for two benchmarks (SitCom, DExTER) and ran model failure analysis to refine task and dataset design.</p>
+        </article>
+
+        <article class="experience">
+          <p class="exp-title">Hyundai WIA</p>
+          <p class="exp-date">Jun 2026</p>
+          <p class="item-description">Helped practitioners across departments build AI-assisted automation tools, from MATLAB/Simulink analysis summaries to DB/ERP-linked reports and parts defect and inventory summaries. Mapped existing workflows into concrete requirements; one recurring task dropped from 30+ minutes to 2–3 minutes.</p>
         </article>
 
         <article class="experience">
           <p class="exp-title">Electronics and Telecommunications Research Institute</p>
-          <p class="exp-role">Research Intern</p>
           <p class="exp-date">Jan 2025 – Feb 2025</p>
           <p class="item-description">Investigated continual and compositional knowledge editing in a sequential multimodal setting and implemented the MEND baseline used in MemEIC’s cross-backbone experiments.</p>
         </article>
 
         <article class="experience">
           <p class="exp-title">Asan Medical Center</p>
-          <p class="exp-role">Research Assistant</p>
           <p class="exp-date">Jun 2023 – Aug 2023</p>
           <p class="item-description">Built a medical-document de-identification pipeline combining OCR and LLM-based entity detection to locate and mask personally identifiable information.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2 class="section-title">Projects.</h2>
+      <div class="section-content">
+        <article class="project">
+          <p class="project-title">Call2Todo: On-Device Call Assistant</p>
+          <p class="exp-date">2026</p>
+          <p class="item-description">Agent pipeline that transcribes work calls on-device with speaker diarization, extracts to-dos and schedules, and adds them to the calendar on user approval. Audio and transcripts never leave the device. Evidence-segment verification drops hallucinated items; includes a Korean relative-date parser and an abstraction layer for swappable STT/LLM engines.</p>
+          <div class="tags"><span>sherpa-onnx</span><span>llama.cpp</span><span>On-device STT / LLM</span><span>Privacy-first</span></div>
+        </article>
+
+        <article class="project">
+          <p class="project-title">seesun: Personalized On-Device Object Segmentation App</p>
+          <p class="exp-date">Jun 2026 – present</p>
+          <p class="item-description">Real-time YOLOE segmentation on mobile with LiteRT and MediaPipe. Traced a 2–3x slowdown to dynamic shape signatures left by onnx2tf that made the GPU delegate fall back to CPU, and fixed it by patching the tflite flatbuffer in place: <strong>312 → 54 ms/frame</strong>. Added user-named instance recognition by storing appearance features on-device and relabeling matches, with model weights untouched.</p>
+          <div class="tags"><span>YOLOE</span><span>LiteRT</span><span>MediaPipe</span><span>Kotlin</span></div>
+          <a href="https://play.google.com/store/apps/details?id=com.seesun.app" target="_blank" rel="noopener" class="project-link">Google Play</a>
+        </article>
+
+        <article class="project">
+          <p class="project-title">Multi-Person Identity Clustering</p>
+          <p class="exp-role">Vision and Learning Lab, SNU · Barrier-free audio description</p>
+          <p class="exp-date">Jul 2025 – Aug 2025</p>
+          <p class="item-description">Cleaned noisy identity labels with gender-based filtering and minimum-image thresholds, then replaced k-means with agglomerative clustering plus k-reciprocal re-ranking. Pairwise F1 <strong>0.91 → 0.94</strong> averaged over 10 random draws of 100 IDs, above the 0.93 target. Used t-SNE to isolate residual mixed-gender and cross-race errors.</p>
+          <div class="tags"><span>RetinaFace</span><span>FaceNet</span><span>k-reciprocal re-ranking</span><span>t-SNE</span></div>
+        </article>
+
+        <article class="project">
+          <p class="project-title">Explainable Defect Detection System</p>
+          <p class="exp-role">Smart Factory Capstone Design 2, SKKU · Korea Copyright Commission C-2024-052449</p>
+          <p class="exp-date">Aug 2024 – Dec 2024</p>
+          <p class="item-description">Compared ResNet50, MobileNetV2, EfficientNetB0, and Swin Transformer for real-time defect detection and integrated LIME and SHAP explanations with LLM-generated natural-language rationale in a Streamlit GUI, so operators can upload images, pick a model, and check why a part was flagged.</p>
+          <div class="tags"><span>PyTorch</span><span>Swin Transformer</span><span>LIME / SHAP</span><span>Streamlit</span></div>
+        </article>
+
+        <article class="project">
+          <p class="project-title">RAG Assistant for University Freshmen</p>
+          <p class="exp-role">Course project, AI System @ SKKU · Team lead</p>
+          <p class="exp-date">Mar 2024 – Jun 2024</p>
+          <p class="item-description">Defined target users and requirements, then built the full crawling, preprocessing, embedding, FAISS indexing, retrieval, and GPT-4 generation pipeline with LangChain RetrievalQA. After mid-project testing, added campus-community data and a campus-slang dictionary. Rated 2+ points higher on a 5-point usefulness scale than the existing rule-based campus chatbot.</p>
+          <div class="tags"><span>LangChain</span><span>FAISS</span><span>GPT-4 API</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="teaching">
+      <h2 class="section-title">Teaching & Activities.</h2>
+      <div class="section-content">
+        <ul class="recognition-list">
+          <li>Teaching Assistant, AI Basics and Uses, SKKU (Fall 2024)</li>
+          <li>Mentor, SW Mentoring Program, SKKU (Summer 2023). 21-hour Python data-analysis course for high-school students; Best Award.</li>
+          <li>Education Officer, SKKU Academic Photography Association (2022 – 2024). Ran study sessions on camera principles, computational imaging, and post-processing for a 500+ member club.</li>
+        </ul>
       </div>
     </section>
 
@@ -106,11 +183,13 @@
         <ul class="recognition-list">
           <li>Outstanding Graduate Award, SKKU</li>
           <li>President’s Commendation, SKKU</li>
+          <li>SW Mentoring Best Award, SKKU</li>
           <li>Dean’s List, 4 semesters</li>
         </ul>
       </div>
     </section>
   </main>
+  <script src="toc.js" defer></script>
 </body>
 
 </html>

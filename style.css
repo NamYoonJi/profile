@@ -1,15 +1,15 @@
 /* Reset & Base Styles */
 :root {
-  --bg-color: #12161d;
-  --card-bg: rgba(20, 20, 20, 0.6);
-  --text-primary: #ffffff;
-  --text-secondary: #94a3b8;
+  --bg-color: #f5f6f8;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --text-primary: #111827;
+  --text-secondary: #64748b;
   /* Slate 400 */
-  --accent-color: #8ea9d4;
+  --accent-color: #3f66b0;
   /* Blue 500 */
   --accent-glow: rgba(59, 130, 246, 0.5);
-  --border-color: rgba(255, 255, 255, 0.1);
-  --highlight-bg: rgba(59, 130, 246, 0.15);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --highlight-bg: rgba(63, 102, 176, 0.1);
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
@@ -22,8 +22,8 @@
 body {
   background-color: var(--bg-color);
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   background-size: 50px 50px;
   /* Tech grid effect */
   color: var(--text-primary);
@@ -51,7 +51,7 @@ a:hover {
 /* Container */
 .container {
   width: 100%;
-  max-width: 900px;
+  max-width: none;
   margin: 0 auto;
   background: var(--card-bg);
   backdrop-filter: blur(12px);
@@ -60,7 +60,7 @@ a:hover {
   border-radius: 12px;
   /* Sharper corners */
   padding: 60px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
   position: relative;
   overflow: hidden;
 }
@@ -88,12 +88,12 @@ a:hover {
 .profile-photo {
   width: 180px;
   height: 220px;
-  background-color: #1a1a1a;
+  background-color: #e5e7eb;
   flex-shrink: 0;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border-color);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   position: relative;
 }
 
@@ -119,7 +119,7 @@ a:hover {
   font-weight: 700;
   margin-bottom: 12px;
   letter-spacing: -0.02em;
-  background: linear-gradient(to right, #ffffff, #94a3b8);
+  background: linear-gradient(to right, #111827, #475569);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -155,7 +155,7 @@ a:hover {
 .bio p {
   font-size: 15px;
   line-height: 1.7;
-  color: #d1d5db;
+  color: #374151;
   /* Gray 300 */
 }
 
@@ -179,7 +179,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.04);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   transition: all 0.3s ease;
@@ -200,7 +200,7 @@ a:hover {
 }
 
 .icon-link:hover {
-  background: rgba(142, 169, 212, 0.15);
+  background: rgba(63, 102, 176, 0.12);
   color: var(--accent-color);
   border-color: var(--accent-color);
   transform: translateY(-3px);
@@ -245,15 +245,15 @@ a:hover {
 .publication {
   margin-bottom: 24px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.02);
   border: 1px solid transparent;
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .publication:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
@@ -279,7 +279,7 @@ a:hover {
 
 .pub-venue {
   font-size: 13px;
-  color: #7dd3fc;
+  color: #0369a1;
   /* Light Blue */
   font-weight: 500;
 }
@@ -299,7 +299,7 @@ a:hover {
 .pub-description,
 .item-description {
   margin-top: 12px;
-  color: #d1d5db;
+  color: #374151;
   font-size: 13px;
   line-height: 1.7;
 }
@@ -393,7 +393,7 @@ a:hover {
 
 .edu-details ul {
   list-style: none;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.04);
   padding: 16px;
   border-radius: 6px;
 }
@@ -414,7 +414,7 @@ a:hover {
   margin-top: 20px;
   padding: 18px 20px 18px 38px;
   color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.02);
   border-radius: 8px;
 }
 
@@ -424,6 +424,190 @@ a:hover {
 
 .recognition-list li:last-child {
   margin-bottom: 0;
+}
+
+/* Fixed section chips (top-right) */
+html {
+  scroll-behavior: smooth;
+}
+
+.toc {
+  position: fixed;
+  top: 16px;
+  right: 110px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.toc a {
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.toc a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  background: rgba(63, 102, 176, 0.12);
+}
+
+.toc a.active {
+  color: #ffffff;
+  background: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.section {
+  scroll-margin-top: 64px;
+}
+
+/* Korean page: Inter has no Hangul, fall back to Noto Sans KR */
+html[lang="ko"] {
+  --font-main: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bg-color: #f8f6f5;
+  --text-primary: #211b1b;
+  --text-secondary: #6e5d5e;
+  --accent-color: #5F2225;
+  --accent-glow: rgba(95, 34, 37, 0.35);
+  --highlight-bg: rgba(95, 34, 37, 0.09);
+  --border-color: rgba(95, 34, 37, 0.22);
+}
+
+html[lang="ko"] body {
+  word-break: keep-all;
+}
+
+html[lang="ko"] .name {
+  background: linear-gradient(to right, var(--text-primary), var(--accent-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+html[lang="ko"] .bio p,
+html[lang="ko"] .description-list {
+  color: #3f3435;
+}
+
+html[lang="ko"] .toc a.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  html[lang="ko"] .toc {
+    background: rgba(248, 246, 245, 0.94);
+  }
+}
+
+html[lang="ko"] .pub-venue {
+  color: var(--accent-color);
+}
+
+html[lang="ko"] .publication,
+html[lang="ko"] .project {
+  border-color: #5F2225;
+}
+
+html[lang="ko"] .publication:hover,
+html[lang="ko"] .project:hover {
+  border-color: var(--accent-color);
+}
+
+html[lang="ko"] .tags span {
+  border-color: #5F2225;
+}
+
+html[lang="ko"] .icon-link:hover,
+html[lang="ko"] .toc a:hover,
+html[lang="ko"] .project-link:hover {
+  background: var(--highlight-bg);
+}
+
+html[lang="ko"] .description-list {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+html[lang="ko"] .description-list li + li {
+  margin-top: 5px;
+}
+
+html[lang="ko"] .description-list li::marker {
+  color: var(--accent-color);
+}
+
+/* Projects */
+.project {
+  margin-bottom: 18px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.project-title {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.project .item-description {
+  margin-top: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.tags span {
+  padding: 3px 8px;
+  color: var(--accent-color);
+  background: var(--highlight-bg);
+  border: 1px solid rgba(63, 102, 176, 0.25);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+}
+
+.project-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  background: rgba(63, 102, 176, 0.12);
 }
 
 /* Easter Egg - Reverted */
@@ -437,7 +621,7 @@ a:hover {
 
 .easter-egg p {
   font-size: 11px;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(0, 0, 0, 0.25);
   letter-spacing: 1px;
   transition: color 0.3s ease;
 }
@@ -449,7 +633,28 @@ a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
-    padding: 20px 10px;
+    padding: 64px 10px 20px;
+  }
+
+  .toc {
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    padding: 8px 10px;
+    background: rgba(245, 246, 248, 0.94);
+    border-bottom: 1px solid var(--border-color);
+    scrollbar-width: none;
+  }
+
+  .toc::-webkit-scrollbar {
+    display: none;
+  }
+
+  .section {
+    scroll-margin-top: 56px;
   }
 
   .container {
