@@ -477,7 +477,7 @@ html[lang="ko"] {
   --bg-color: #f8f6f5;
   --text-primary: #211b1b;
   --text-secondary: #6e5d5e;
-  --accent-color: #5F2225;
+  --accent-color: #97333a;
   --accent-glow: rgba(95, 34, 37, 0.35);
   --highlight-bg: rgba(95, 34, 37, 0.09);
   --border-color: rgba(95, 34, 37, 0.22);
@@ -491,6 +491,22 @@ html[lang="ko"] .name {
   background: linear-gradient(to right, var(--text-primary), var(--accent-color));
   background-clip: text;
   -webkit-background-clip: text;
+}
+
+html[lang="ko"] .interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+html[lang="ko"] .interest-tags span {
+  padding: 4px 10px;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 html[lang="ko"] .bio p,

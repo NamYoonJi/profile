@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="남윤지. 멀티모달 언어모델, 지식 편집, 응용 머신러닝을 연구하고 구현하는 멀티모달 AI 연구자이자 엔지니어.">
+  <meta name="description" content="남윤지의 연구·개발 경험과 프로젝트를 소개하는 프로필.">
   <meta name="theme-color" content="#f8f6f5">
   <meta property="og:title" content="남윤지 | Yoonji Nam">
-  <meta property="og:description" content="멀티모달 모델, 평가, 지식 편집, 응용 AI 시스템을 아우르는 연구와 엔지니어링.">
-  <meta property="og:image" content="../profile_2026.jpg">
+  <meta property="og:description" content="멀티모달 AI, Speech AI, AI Agents, On-device AI 관련 연구·개발 경험과 프로젝트.">
+  <meta property="og:image" content="./profile_2026.jpg">
   <title>남윤지 | Yoonji Nam</title>
   <link rel="alternate" hreflang="en" href="https://namyoonji.github.io/">
-  <link rel="alternate" hreflang="ko" href="https://namyoonji.github.io/ko/">
+  <link rel="alternate" hreflang="ko" href="https://namyoonji.github.io/profile/">
   <link rel="stylesheet" href="./style.css?v=ko-burgundy-20261010">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +20,10 @@
 
 <body>
   <nav class="toc" aria-label="섹션 바로가기">
-    <a href="#publications">publications</a>
-    <a href="#experience">experiences</a>
+    <a href="#education">학력 및 수상</a>
+    <a href="#publications">논문</a>
+    <a href="#experience">경험</a>
     <a href="#projects">프로젝트</a>
-    <a href="#education">학력</a>
   </nav>
   <main class="container">
     <header class="header">
@@ -35,12 +35,8 @@
         <p class="contact">
           연락처: <a href="mailto:yoon7k3@gmail.com">yoon7k3@gmail.com</a> · <a href="mailto:seinundzeit@g.skku.edu">seinundzeit@g.skku.edu</a>
         </p>
-        <div class="bio">
-          <p>
-            멀티모달 언어모델을 연구하고 구현하는 연구자이자 엔지니어입니다.
-            비전, 음성, 언어를 아우르며, 모호한 실제 상호작용을 측정 가능하고 유용한 모델 행동으로
-            바꾸는 데 집중합니다.
-          </p>
+        <div class="interest-tags" aria-label="관심 분야">
+          <span>#Multimodal AI</span><span>#Speech AI</span><span>#AI Agents</span><span>#On-device AI</span>
         </div>
       </div>
     </header>
@@ -57,16 +53,34 @@
       </div>
     </nav>
 
+    <section class="section" id="education">
+      <h2 class="section-title">학력 및 수상.</h2>
+      <div class="section-content">
+        <article class="education">
+          <p class="edu-title">성균관대학교</p>
+          <p class="edu-role">데이터사이언스융합전공 학사</p>
+          <p class="skku-date">2026 · GPA 4.45 / 4.5 · 소프트웨어융합대학 수석</p>
+        </article>
+        <ul class="recognition-list">
+          <li>최우등졸업, 성균관대학교</li>
+          <li>총장 표창, 성균관대학교</li>
+          <li>SW 멘토링 최우수상, 성균관대학교</li>
+          <li>Dean’s List 4학기</li>
+        </ul>
+      </div>
+    </section>
+
     <section class="section" id="publications">
-      <h2 class="section-title">publications.</h2>
+      <h2 class="section-title">논문.</h2>
       <div class="section-content">
         <article class="publication">
           <p class="pub-title">SitCom: Scaling Egocentric Multi-Party Spoken Dialogue for Situated Communication Assistance</p>
           <p class="pub-authors">Heeseung Yun*, Sehun Lee*, Tony Woo†, <span class="author-me">Yoonji Nam</span>†, Sung-Feng Huang, Chao-Han Huck Yang, Gunhee Kim</p>
           <p class="pub-venue">NeurIPS 2026</p>
           <ul class="description-list">
-            <li>SitCom-Bench의 QA 구성과 평가 프로토콜 설계.</li>
-            <li>대화 내용 이해와 현재 상황에 맞는 응답을 평가하도록 사람 검증을 거친 4.3k개 문항 생성 파이프라인 구축.</li>
+            <li>사용자에게 필요한 화자 확인, 발화 회상, 요약, 후속 대화 제안 등의 보조 기능과 평가 질문 설계.</li>
+            <li>대화를 듣지 않아도 정답을 맞힐 수 있는 문항을 블라인드 테스트로 찾아내고 불필요한 단서를 제거하는 생성·검증 파이프라인 구축.</li>
+            <li>사람 검증을 거쳐 4.3k개 평가 문항 구축.</li>
           </ul>
           <p class="equal-note">*, † Equal contribution.</p>
         </article>
@@ -90,7 +104,7 @@
     </section>
 
     <section class="section" id="experience">
-      <h2 class="section-title">experiences.</h2>
+      <h2 class="section-title">경험.</h2>
       <div class="section-content">
         <article class="experience">
           <p class="exp-title">서울대학교 시각 및 학습 연구실 (Vision and Learning Lab)</p>
@@ -138,8 +152,7 @@
           <p class="exp-date">2026.06 – 현재</p>
           <ul class="description-list">
             <li>LiteRT·MediaPipe를 이용한 모바일 YOLOE 실시간 분할 구현.</li>
-            <li>GPU delegate의 CPU 폴백 원인을 동적 shape signature에서 찾아 패치하고 추론 시간을 <strong>312 → 54 ms/frame</strong>으로 단축.</li>
-            <li>사용자가 이름 붙인 개체의 외관 특징을 기기에 저장해 이후 촬영에 반영하는 개인화 인식 추가.</li>
+            <li>사용자가 이름 붙인 개체의 외관 특징을 기기에 저장해 이후 촬영에 반영하는 개인화 인식 기능 구현.</li>
           </ul>
           <div class="tags"><span>YOLOE</span><span>LiteRT</span><span>MediaPipe</span><span>Kotlin</span></div>
           <a href="https://play.google.com/store/apps/details?id=com.seesun.app" target="_blank" rel="noopener" class="project-link">Google Play</a>
@@ -182,22 +195,6 @@
       </div>
     </section>
 
-    <section class="section" id="education">
-      <h2 class="section-title">학력 및 수상.</h2>
-      <div class="section-content">
-        <article class="education">
-          <p class="edu-title">성균관대학교</p>
-          <p class="edu-role">데이터사이언스융합전공 학사</p>
-          <p class="skku-date">2026 · GPA 4.45 / 4.5 · 소프트웨어융합대학 수석</p>
-        </article>
-        <ul class="recognition-list">
-          <li>최우등졸업, 성균관대학교</li>
-          <li>총장 표창, 성균관대학교</li>
-          <li>SW 멘토링 최우수상, 성균관대학교</li>
-          <li>Dean’s List 4학기</li>
-        </ul>
-      </div>
-    </section>
   </main>
   <script src="./toc.js" defer></script>
 </body>
