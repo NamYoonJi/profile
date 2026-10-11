@@ -501,12 +501,17 @@ html[lang="ko"] .interest-tags {
 }
 
 html[lang="ko"] .interest-tags span {
-  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
   color: var(--accent-color);
-  border: 1px solid var(--accent-color);
+  background: var(--highlight-bg);
+  border: 1px solid rgba(95, 34, 37, 0.25);
   border-radius: 999px;
   font-size: 12px;
   font-weight: 500;
+  line-height: 1.4;
+  white-space: nowrap;
 }
 
 html[lang="ko"] .bio p,
